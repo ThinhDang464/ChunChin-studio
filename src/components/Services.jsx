@@ -30,7 +30,7 @@ const Services = () => {
   const [activeService, setActiveService] = useState(null);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-white py-24 border-b">
+    <section className="relative min-h-screen flex items-center justify-center bg-white md:py-24 border-b">
       {/* The Image Container*/}
       {/*Abosulute item needs w and h, use h-[90%] for paddding cause absolute does not care ab parent padding*/}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[800px] h-[90%]">
@@ -42,7 +42,7 @@ const Services = () => {
             /*typical class tailwind to make image fill parent container*/
             className={`
               absolute inset-0 w-full h-full object-cover
-              transition-opacity duration-500 ease-in-out
+              transition-opacity duration-300 ease-in-out
               ${activeService === service.name ? "opacity-100" : "opacity-0"}
             `}
           />
@@ -57,8 +57,8 @@ const Services = () => {
             onMouseEnter={() => setActiveService(service.name)}
             onMouseLeave={() => setActiveService(null)}
             className={`
-              py-15 cursor-pointer 
-              transition-opacity duration-700 ease-in-out
+              py-5 lg:py-15 cursor-pointer 
+              transition-all duration-700 ease-in-out
               ${
                 activeService && activeService !== service.name
                   ? "opacity-0"
@@ -68,7 +68,9 @@ const Services = () => {
           >
             <p
               className={`
-                text-8xl 
+                text-xl
+                md:text-6xl
+                lg:text-8xl 
                 transition-all duration-500 ease-in-out
                 ${
                   activeService === service.name

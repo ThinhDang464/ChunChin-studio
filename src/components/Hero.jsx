@@ -4,13 +4,15 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="px-8 py-8 relative border-b">
+    <section className="sm:px-8 sm:py-8 relative border-b">
       <img className="w-full h-full object-cover" src={heroimg} />
       <Link
         to="/portfolio"
         className="
-          absolute bottom-20 right-40 
-          text-white text-xl  
+          text-sm
+          bottom-5 right-5
+          absolute sm:bottom-20 sm:right-40 
+          text-white sm:text-xl  
           hover:underline underline-offset-4
           transition-all duration-300
         "

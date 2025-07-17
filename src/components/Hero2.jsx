@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
 import heroimg from "../assets/heroimg2.jpg";
 const Hero2 = () => {

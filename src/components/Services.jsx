@@ -58,7 +58,7 @@ const Services = () => {
             onMouseLeave={() => setActiveService(null)}
             className={`
               py-15 cursor-pointer 
-              transition-opacity duration-500 ease-in-out
+              transition-opacity duration-700 ease-in-out
               ${
                 activeService && activeService !== service.name
                   ? "opacity-0"
